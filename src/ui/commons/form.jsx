@@ -20,7 +20,11 @@ export default function Form({ dataToken }) {
     const [notBillsScreen, setNotBillsScreen] = useState(false)
     const [existBills, setExistBills] = useState(false)
     const [bills, setBills] = useState()
+
+
     const [data, isLoading, refetch] = ConfigAndBills(dataToken, proyectId)
+
+
     const queryClient = useQueryClient()
 
     useEffect(() => {
