@@ -11,7 +11,6 @@ import download from '../../assets/download.png'
 
 export default function SingleView({ bill, setIsSingleView }) {
 
-    console.log(bill)
     let year = new Date(bill.expirationDateFirst * 1000).getFullYear().toString()
     let month = new Date(bill.expirationDateFirst * 1000).getMonth().toString()
     let newMonth = month.length === 1 ? 0 + month : month
@@ -74,11 +73,6 @@ export default function SingleView({ bill, setIsSingleView }) {
                 </DescriptionDown>
             </div>
         </ContainerSingleView>
-
-
-
-
-
     )
 }
 
@@ -122,6 +116,12 @@ font-weight:bold;
 &:hover{
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px;
 }
+@media (max-width: 767px) {
+    width: 90%;
+   
+   
+}
+
 `
 const ContainerBtnsPaySubs = styled.div`
 display:flex;
@@ -130,6 +130,11 @@ align-items:center;
 justify-content:space-around;
 box-shadow: 0px 0px 0px #888, 0px -1px 5px #888;
 padding:10px 0;
+
+@media (max-width: 767px) {
+    flex-direction:column;
+   
+}
 `
 
 const PaySuscribBtn = styled.button`
@@ -144,6 +149,11 @@ color: white;
 box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px;
 padding: 0.5em;
 font-size:16px;
+@media (max-width: 767px) {
+    width: 90%;
+    margin-top:10px;
+   
+}
 `
 
 const ImgBtn = styled.img`
@@ -187,6 +197,12 @@ background-color:white;
 box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
 boder-radius:25px;
 margin-top:85px;
+
+
+@media (max-width: 767px) {
+    width:90%;
+   
+}
 `;
 
 const Header = styled.div`

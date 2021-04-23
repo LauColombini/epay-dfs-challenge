@@ -32,8 +32,6 @@ export default function Form({ dataToken }) {
         }
     }, [dataToken, data])
 
-    console.log(data, 'data')
-
     const onSubmit = () => {
         queryClient.invalidateQueries("ConfigAndBills")
         refetch()
@@ -121,10 +119,15 @@ background-color: white;
 border-top-left-radius:5px;
 border-top-right-radius:5px;
 border-bottom: 2px solid rgba(0,0,0,0);
+font-size:14px;
 &:hover{
     border-bottom: 2px solid RGBA(0,0,0,0.13);
 }
-font-size:14px;
+@media (max-width: 576px) {
+    width:100%;
+    margin:0;
+}
+
 `
 
 const ContinuarButtom = styled.button`
@@ -170,11 +173,20 @@ border-radius:5px;
 padding: 0px 0.75em;
 font-size:20px;
 box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px;
+@media (max-width: 576px) {
+    width:80%;
+    
+}
 `
 
 
 const ButtonContainer = styled.div`
 width:100%;
+@media (max-width: 576px) {
+    display:flex;
+    flex-direction:column;
+}
+
 `
 
 const Formm = styled.form`
@@ -187,6 +199,10 @@ justify-content:center;
 align-items:center;
 margin-top:55px;
 user-select:none;
+@media (max-width: 576px) {
+    width: 90%;
+    margin: 0 10px;
+}
 `
 
 

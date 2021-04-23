@@ -19,10 +19,10 @@ export default function Home() {
                     <TextPays>
                         Los pagos son procesados de forma segura por ePayco
                     </TextPays>
-                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', alignSelf: 'flex-end', marginRight: 110, marginBottom: 9 }}>
+                    <PoweredBy >
                         <p style={{ fontSize: 13, userSelect: 'none' }}>Powered by </p>
                         <ImgEPayco src={EpaycoLogo} alt="" />
-                    </div>
+                    </PoweredBy>
                 </Container>
             </BackgroundImage>
 
@@ -37,6 +37,7 @@ display:flex;
 flex-direction: column;
 justify-content:space-between;
 align-items:center;
+
 `
 const TextPays = styled.p`
 width: 250px;
@@ -56,6 +57,25 @@ const LogoCasaa = styled.img`
 align-self: flex-start;
 margin: 1% 0 0 18%;
 user-select:none;
+
+@media (max-width: 767px) {
+    align-self: center;
+    margin:0;
+}
+
+`
+const PoweredBy = styled.div`
+display: flex;
+flex-direction: row;
+align-items: center;
+align-self: flex-end;
+margin-right: 110px;
+margin-bottom: 9px;
+
+@media (max-width: 767px) {
+    align-self: center;
+    margin:0;
+}
 `
 
 

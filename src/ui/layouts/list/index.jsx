@@ -98,6 +98,11 @@ flex-direction:row;
 align-items:center;
 justify-content:space-around;
 margin: 20px;
+@media (max-width: 767px) {
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:flex-start;
+}
 `
 
 const ContainerItemBill = styled.div`
@@ -118,6 +123,16 @@ box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px;
 cursor:pointer;
 &:active{
     background: rgb(44, 138, 250);
+}
+
+@media (max-width: 767px) {
+    width:100%;
+    max-width:100%;
+    border-radius:20px;
+    height:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 `
 
