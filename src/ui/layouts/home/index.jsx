@@ -1,19 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from "styled-components";
 import Form from '../../commons/form'
 import background from '../../../assets/background.png'
 import LogoCasa from '../../../assets/logo.png'
 import EpaycoLogo from '../../../assets/ePayco.png'
+import useLogin from '../../../hooks/useLogin'
 
 
 export default function Home() {
+    const [data, isLoading] = useLogin()
 
     return (
         <Background>
             <BackgroundImage>
                 <Container>
                     <LogoCasaa src={LogoCasa} alt="" />
-                    <Form />
+                    {!isLoading ? <Form dataToken={data.data.token} /> : <Form />}
                     <TextPays>
                         Los pagos son procesados de forma segura por ePayco
                     </TextPays>
